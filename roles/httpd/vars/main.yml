@@ -1,2 +1,5 @@
 ---
 # vars file for httpd
+#
+httpd_port: 8080
+...

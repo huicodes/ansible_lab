@@ -1,2 +1,7 @@
 ---
 # defaults file for httpd
+
+httpd_user: apache
+
+httpd_group: apache
+...

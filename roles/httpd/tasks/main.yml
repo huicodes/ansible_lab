@@ -5,7 +5,7 @@
 - name: install httpd
   ansible.builtin.yum:
     name: httpd
-    state: present
+    state: installed
 
 - name: Start and enable httpd
   ansible.builtin.service:
@@ -13,7 +13,15 @@
     state: started
     enabled: yes
 
-    #- name: copy the index file to the apache server
-     # ansible.builtin.copy:
-      #  src: index.html
-       # dest: /var/www/html/index.html
+- name: copy the index file to the apache server
+  ansible.builtin.copy:
+    src: index.html
+    dest: /var/www/html/index.html
+
+- name: httpd port configuration
+  template:
+    src: httpd.conf.j2
+    dest: /etc/httpd/conf/httpd.conf
+  notify: 
+    - restart httpd
+...
