@@ -1,8 +1,8 @@
 ---
 # handlers file for ubuntu_httpd
 
-- name: restart httpd
+- name: restart apache2
   ansible.builtin.service:
-    name: httpd
+    name: apache2
     state: restarted
 ...
