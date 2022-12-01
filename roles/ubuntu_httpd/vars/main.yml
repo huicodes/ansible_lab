@@ -1,0 +1,5 @@
+---
+# vars file for ubuntu_httpd
+
+httpd_port: 8080
+...

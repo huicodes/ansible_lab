@@ -1,0 +1,5 @@
+---
+# vars file for redhat_httpd
+
+httpd_port: 8080
+...
